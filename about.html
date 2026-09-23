@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>درباره پاپیون و ضمانت اصالت | بوتیک تخصصی عطر پاپیون</title>
+  <meta name="description" content="آشنایی با فلسفه پیدایش بوتیک عطر پاپیون، استاندارد استریل دست‌ریزها، تضمین ۱۰۰٪ اصالت فیزیکی و آزمایشگاه تخصصی دکانت.">
+  
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <div>✦ تضمین ۱۰۰٪ اصالت و استعلام بچ‌کد بطری‌های مادر در حضور مشتری</div>
+      <div>کد تخفیف اولین خرید: <strong style="color: #f3e5ab; font-family: monospace;">PAPION10</strong></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <a href="./index.html" class="brand-logo">
+          <div class="brand-crest">P</div>
+          <div>
+            <div class="brand-title">
+              <span>پاپیون</span>
+              <span class="tag">PAPION</span>
+            </div>
+            <div class="brand-subtitle">اصالت، ظرافت و تخصص بویایی</div>
+          </div>
+        </a>
+
+        <button type="button" class="header-search-btn" onclick="openSearchModal()">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <span>🔍</span>
+            <span>جستجوی نام عطر، برند، نت بویایی...</span>
+          </span>
+          <span class="kbd-shortcut">Ctrl + K</span>
+        </button>
+
+        <div class="header-actions">
+          <button type="button" class="btn-icon" onclick="openQuizModal()" title="رایحه‌یاب هوشمند">
+            <span>🧭</span>
+          </button>
+          <button type="button" class="btn-icon" onclick="openSearchModal()" title="جستجو">
+            <span>🔍</span>
+          </button>
+          <button type="button" class="btn-cart-main" onclick="openCart()">
+            <span style="position: relative;">
+              <span>🛍️</span>
+              <span class="badge-count" id="header-cart-badge" style="display: none;">۰</span>
+            </span>
+            <span>سبد خرید</span>
+            <span class="cart-price" id="header-cart-price">۰ تومان</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="./index.html">صفحه اصلی</a></li>
+          <li><a href="./products.html">ویترین دکانت‌ها و عطرها</a></li>
+          <li><a href="./about.html" class="active">درباره پاپیون و ضمانت اصالت</a></li>
+          <li><a href="./contact.html">تماس با ما و شو روم</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Header -->
+  <section style="padding: 4rem 0; background: radial-gradient(circle at 80% 20%, rgba(212,175,55,0.1) 0%, transparent 60%), #0f1118; border-bottom: 1px solid #1f2536;">
+    <div class="container" style="max-width: 860px; text-align: center;">
+      <span style="color: #d4af37; font-size: 0.82rem; font-weight: 700;">روایت ما</span>
+      <h1 style="font-size: 2.4rem; color: #fff; margin-top: 0.5rem; margin-bottom: 1.2rem;">
+        هنر پوشیدن عطر، بدون قمار بلاندبای
+      </h1>
+      <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.9;">
+        بوتیک تخصصی عطر «پاپیون» در پاییز ۱۴۰۰ با یک هدف مشخص متولد شد: پایان دادن به خریدهای کورکورانه و اشتباه (Blind Buy) که میلیون‌ها تومان هزینه بر دوش عاشقان عطر می‌گذاشت. ما این امکان را فراهم کردیم تا هر فرد بتواند اشرافی‌ترین روایح نیش پاریس، میلان و لندن را در قالب دست‌ریزهای اورجینال ۲، ۵ و ۱۰ میلی‌متری امتحان کند.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section style="padding: 4rem 0; background: #0c0d10; border-bottom: 1px solid #1f2434;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span style="color: #d4af37; font-size: 0.8rem; font-weight: 700;">استانداردهای پاپیون</span>
+        <h2 style="font-size: 1.8rem; color: #fff; margin-top: 0.4rem;">۴ تعهد تزلزل‌ناپذیر ما به شما</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+        <div style="padding: 1.75rem; background: #131622; border: 1px solid #222839; border-radius: 18px;">
+          <div style="font-size: 2rem; margin-bottom: 0.8rem;">🔬</div>
+          <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">تزریق استریل آزمایشگاهی</h3>
+          <p style="font-size: 0.8rem; color: #9ca3af; line-height: 1.8;">
+            دست‌ریزها با سرنگ‌های استریل یکبار مصرف پزشکی بدون تماس با هوا یا گردوغبار مستقیماً از والف بطری مادر تزریق می‌شوند.
+          </p>
+        </div>
+
+        <div style="padding: 1.75rem; background: #131622; border: 1px solid #222839; border-radius: 18px;">
+          <div style="font-size: 2rem; margin-bottom: 0.8rem;">💎</div>
+          <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">ظروف کریستالی با والف مه‌پاش</h3>
+          <p style="font-size: 0.8rem; color: #9ca3af; line-height: 1.8;">
+            ظروف دکانت پاپیون از جنس شیشه ضخیم دارویی ساخته شده‌اند تا از اکسید شدن عطر در مجاورت نور جلوگیری کرده و بدون نشتی در سفر همراه شما باشند.
+          </p>
+        </div>
+
+        <div style="padding: 1.75rem; background: #131622; border: 1px solid #222839; border-radius: 18px;">
+          <div style="font-size: 2rem; margin-bottom: 0.8rem;">🛡️</div>
+          <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">ضمانت مادام‌العمر اصالت</h3>
+          <p style="font-size: 0.8rem; color: #9ca3af; line-height: 1.8;">
+            بچ‌کد بطری‌های مادر ما همواره در سامانه قابل استعلام است. در صورت کوچکترین تردید کارشناسی، وجه بدون قید و شرط بازگردانده می‌شود.
+          </p>
+        </div>
+
+        <div style="padding: 1.75rem; background: #131622; border: 1px solid #222839; border-radius: 18px;">
+          <div style="font-size: 2rem; margin-bottom: 0.8rem;">📦</div>
+          <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">بسته‌بندی اختصاصی هاردباکس</h3>
+          <p style="font-size: 0.8rem; color: #9ca3af; line-height: 1.8;">
+            سفارش‌های شما در جعبه‌های سخت هاردباکس با روکش مخمل و فوم محافظ بسته‌بندی شده تا بدون کوچکترین صدمه به دستتان برسد.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Decant Volume Table -->
+  <section style="padding: 4rem 0; background: #0f1118; border-bottom: 1px solid #1f2536;">
+    <div class="container" style="max-width: 840px;">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span style="color: #d4af37; font-size: 0.8rem; font-weight: 700;">راهنمای مصرف</span>
+        <h2 style="font-size: 1.8rem; color: #fff; margin-top: 0.4rem;">کدام حجم دکانت برای من مناسب‌تر است؟</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #141724; border: 1px solid #252c3f; border-radius: 14px;">
+          <div>
+            <h4 style="font-size: 1rem; color: #fff;">دست‌ریز ۲ میل (تست اولیه)</h4>
+            <p style="font-size: 0.78rem; color: #9ca3af; margin-top: 4px;">حدود ۳۰ الی ۳۵ پاف اسپری</p>
+          </div>
+          <span style="font-size: 0.8rem; color: #f3e5ab; font-weight: 700;">مناسب تست سازگاری عطر با پوست به مدت ۴ تا ۷ روز</span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #141724; border: 1px solid #d4af37; border-radius: 14px; box-shadow: 0 0 15px rgba(212,175,55,0.15);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <h4 style="font-size: 1rem; color: #fff;">دست‌ریز ۵ میل (پرفروش‌ترین و بصرفه)</h4>
+              <span style="font-size: 0.65rem; background: #d4af37; color: #000; padding: 2px 6px; border-radius: 4px; font-weight: 700;">پیشنهاد پاپیون</span>
+            </div>
+            <p style="font-size: 0.78rem; color: #9ca3af; margin-top: 4px;">حدود ۷۵ الی ۸۵ پاف اسپری</p>
+          </div>
+          <span style="font-size: 0.8rem; color: #f3e5ab; font-weight: 700;">کافی برای ۲ الی ۳ هفته استفاده روزمره یا مهمانی</span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem; background: #141724; border: 1px solid #252c3f; border-radius: 14px;">
+          <div>
+            <h4 style="font-size: 1rem; color: #fff;">دست‌ریز ۱۰ میل (سایز مسافرتی)</h4>
+            <p style="font-size: 0.78rem; color: #9ca3af; margin-top: 4px;">حدود ۱۵۰ الی ۱۷۰ پاف اسپری</p>
+          </div>
+          <span style="font-size: 0.8rem; color: #f3e5ab; font-weight: 700;">بیش از یک ماه عطر همراه با پرستیژ بالا در کیف و جیب</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.72rem; color: #6b7280; gap: 1rem;">
+        <div>تمامی حقوق این وب‌سایت متعلق به بوتیک تخصصی عطر پاپیون (Papion) می‌باشد. ۱۴۰۳ ©</div>
+        <div><a href="./products.html" style="color: #d4af37;">مشاهده ویترین عطرها</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared Modals (Cart, Product, Search, Quiz) -->
+  <div class="cart-drawer-overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span>🛍️</span>
+        <h3 style="font-size: 1rem; color: #fff;">سبد خرید شما</h3>
+      </div>
+      <button onclick="closeCart()" style="font-size: 1.3rem; color: #9ca3af; cursor: pointer;">&times;</button>
+    </div>
+    <div style="padding: 1rem 1.25rem 0 1.25rem;">
+      <div class="free-shipping-box">
+        <div id="free-shipping-text">تنها ۲,۰۰۰,۰۰۰ تومان تا ارسال رایگان</div>
+        <div class="progress-track"><div class="progress-fill" id="free-shipping-fill" style="width: 0%;"></div></div>
+      </div>
+    </div>
+    <div class="cart-body" id="cart-items-container"></div>
+    <div class="cart-footer">
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+        <input type="text" id="coupon-input" placeholder="کد تخفیف (مثال: PAPION10)" style="flex: 1; padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid #283044; background: #0c0d10; color: #fff; font-size: 0.75rem; outline: none;">
+        <button onclick="applyCoupon()" style="padding: 0.5rem 0.9rem; border-radius: 8px; background: #1c2232; color: #d4af37; border: 1px solid #2f3850; font-size: 0.75rem; font-weight: 700; cursor: pointer;">اعمال</button>
+      </div>
+      <div style="font-size: 0.78rem; space-y: 0.4rem; color: #9ca3af; margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span>جمع اقلام:</span>
+          <span id="cart-subtotal" style="color: #fff; font-family: monospace;">۰ تومان</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: #10b981;">
+          <span>تخفیف ویژه:</span>
+          <span id="cart-discount" style="font-family: monospace;">۰ تومان</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span>هزینه ارسال:</span>
+          <span id="cart-shipping" style="color: #fff; font-family: monospace;">۰ تومان</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-top: 0.6rem; border-top: 1px solid #222838; font-size: 0.95rem; font-weight: 700; color: #fff;">
+          <span>مبلغ قابل پرداخت:</span>
+          <span id="cart-total" style="color: #f3e5ab; font-family: monospace;">۰ تومان</span>
+        </div>
+      </div>
+      <button onclick="handleCheckout()" style="width: 100%; padding: 0.85rem; border-radius: 12px; background: linear-gradient(90deg, #d4af37, #b58e37); color: #000; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
+        ثبت و نهایی‌سازی سفارش
+      </button>
+    </div>
+  </aside>
+
+  <!-- Product Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content">
+      <button class="btn-close-modal" onclick="closeProductModal()">&times;</button>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div style="background: #0c0d10; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+          <img id="modal-img" src="" alt="" style="width: 100%; max-width: 320px; aspect-ratio: 1/1; object-fit: cover; border-radius: 16px; border: 1px solid #242a3c;">
+        </div>
+        <div style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; max-height: 80vh; overflow-y: auto;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+              <span id="modal-brand" style="color: #d4af37; font-size: 0.78rem; font-weight: 700;"></span>
+              <span id="modal-concentration" style="font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; background: #1f2536; color: #9ca3af;"></span>
+            </div>
+            <h3 id="modal-title-fa" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.2rem;"></h3>
+            <div id="modal-title-en" style="font-size: 0.78rem; color: #6b7280; font-family: monospace; margin-bottom: 1rem;"></div>
+            <p id="modal-desc" style="font-size: 0.78rem; color: #9ca3af; line-height: 1.7; margin-bottom: 1.2rem;"></p>
+            <div style="background: #0f1118; border: 1px solid #1f2434; border-radius: 12px; padding: 0.85rem; margin-bottom: 1.2rem; font-size: 0.72rem;">
+              <div style="margin-bottom: 0.3rem;"><span style="color: #d4af37; font-weight: 700;">نت آغازین: </span><span id="modal-top-notes" style="color: #d1d5db;"></span></div>
+              <div style="margin-bottom: 0.3rem;"><span style="color: #d4af37; font-weight: 700;">نت میانی: </span><span id="modal-heart-notes" style="color: #d1d5db;"></span></div>
+              <div><span style="color: #d4af37; font-weight: 700;">نت پایه: </span><span id="modal-base-notes" style="color: #d1d5db;"></span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.2rem; font-size: 0.72rem;">
+              <div style="background: #141724; padding: 0.6rem; border-radius: 8px; border: 1px solid #23293c;"><div style="color: #9ca3af;">ماندگاری:</div><div id="modal-longevity" style="color: #f3e5ab; font-weight: 700; margin-top: 2px;"></div></div>
+              <div style="background: #141724; padding: 0.6rem; border-radius: 8px; border: 1px solid #23293c;"><div style="color: #9ca3af;">پخش بو:</div><div id="modal-sillage" style="color: #f3e5ab; font-weight: 700; margin-top: 2px;"></div></div>
+            </div>
+            <div style="margin-bottom: 1.2rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">حجم مورد نظر را انتخاب فرمایید:</div>
+              <div id="modal-volume-options" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;"></div>
+            </div>
+          </div>
+          <div style="padding-top: 1rem; border-top: 1px solid #222838; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <div style="font-size: 0.68rem; color: #9ca3af;">قیمت انتخابی:</div>
+              <div id="modal-final-price" style="font-size: 1.15rem; font-weight: 800; color: #f3e5ab; font-family: monospace;"></div>
+            </div>
+            <button onclick="addModalItemToCart()" class="btn-primary" style="padding: 0.75rem 1.4rem;">
+              <span>افزودن به سبد</span>
+              <span>🛍️</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width: 600px; padding: 1.5rem;">
+      <button class="btn-close-modal" onclick="closeSearchModal()">&times;</button>
+      <div style="margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">جستجوی هوشمند در بوتیک پاپیون</h3>
+        <input type="text" id="search-input" oninput="handleSearchInput(event)" placeholder="نام عطر، برند یا نت..." style="width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid #2d354b; background: #0c0d10; color: #fff; font-size: 0.85rem; outline: none;">
+      </div>
+      <div id="search-results" style="max-height: 50vh; overflow-y: auto;"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div class="modal-overlay" id="quiz-modal">
+    <div class="modal-content" style="max-width: 620px; padding: 2rem;">
+      <button class="btn-close-modal" onclick="closeQuizModal()">&times;</button>
+      <div style="text-align: right;" id="quiz-content"></div>
+    </div>
+  </div>
+
+  <script src="./assets/main.js"></script>
+</body>
+</html>

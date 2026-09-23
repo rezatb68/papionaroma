@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ویترین عطرها و دکانت‌های اورجینال | پاپیون (Papion)</title>
+  <meta name="description" content="فهرست کامل و فیلترپذیر دست‌ریزهای اورجینال و ادکلن‌های کمیاب نیش و دیزاینری در بوتیک عطر پاپیون.">
+  
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <div>✦ ارسال رایگان برای سفارش‌های بالای ۲ میلیون تومان در هاردباکس استریل</div>
+      <div>کد تخفیف اولین خرید: <strong style="color: #f3e5ab; font-family: monospace;">PAPION10</strong></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <a href="./index.html" class="brand-logo">
+          <div class="brand-crest">P</div>
+          <div>
+            <div class="brand-title">
+              <span>پاپیون</span>
+              <span class="tag">PAPION</span>
+            </div>
+            <div class="brand-subtitle">ویترین تخصصی عطر و دکانت</div>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <button type="button" class="header-search-btn" onclick="openSearchModal()">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <span>🔍</span>
+            <span>جستجوی نام عطر، برند، نت بویایی...</span>
+          </span>
+          <span class="kbd-shortcut">Ctrl + K</span>
+        </button>
+
+        <!-- Actions -->
+        <div class="header-actions">
+          <button type="button" class="btn-icon" onclick="openQuizModal()" title="رایحه‌یاب هوشمند">
+            <span>🧭</span>
+          </button>
+          <button type="button" class="btn-icon" onclick="openSearchModal()" title="جستجو">
+            <span>🔍</span>
+          </button>
+          <button type="button" class="btn-cart-main" onclick="openCart()">
+            <span style="position: relative;">
+              <span>🛍️</span>
+              <span class="badge-count" id="header-cart-badge" style="display: none;">۰</span>
+            </span>
+            <span>سبد خرید</span>
+            <span class="cart-price" id="header-cart-price">۰ تومان</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sub-nav">
+      <div class="container">
+        <ul class="nav-links">
+          <li><a href="./index.html">صفحه اصلی</a></li>
+          <li><a href="./products.html" class="active">ویترین دکانت‌ها و عطرها</a></li>
+          <li><a href="javascript:void(0)" onclick="setFilter('gender', 'men')">عطرهای مردانه</a></li>
+          <li><a href="javascript:void(0)" onclick="setFilter('gender', 'women')">عطرهای زنانه</a></li>
+          <li><a href="javascript:void(0)" onclick="setFilter('gender', 'unisex')">عطرهای یونیسکس</a></li>
+          <li><a href="./about.html">درباره پاپیون و ضمانت اصالت</a></li>
+          <li><a href="./contact.html">تماس با ما و شو روم</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Title & Breadcrumb -->
+  <div style="background: #0f1118; border-bottom: 1px solid #1f2536; padding: 2rem 0;">
+    <div class="container">
+      <div style="font-size: 0.75rem; color: #9ca3af; margin-bottom: 0.5rem;">
+        <a href="./index.html">صفحه اصلی</a> / <span style="color: #d4af37;">ویترین عطرها و دکانت‌ها</span>
+      </div>
+      <h1 style="font-size: 1.8rem; color: #fff;">کلکسیون دست‌ریزهای اورجینال پاپیون</h1>
+      <p style="font-size: 0.82rem; color: #9ca3af; margin-top: 0.4rem;">
+        تمامی عطرها با سرنگ‌های استریل یکبار مصرف به صورت مستقیم از شیشه مادر در حجم‌های ۲، ۵ و ۱۰ میل استخراج می‌شوند.
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Catalog Content -->
+  <main style="padding: 3rem 0; background: #0c0d10;">
+    <div class="container">
+      <div class="grid-catalog">
+        
+        <!-- Sidebar Filter Controls -->
+        <aside class="catalog-sidebar" style="background: #12141c; border: 1px solid #202636; border-radius: 18px; padding: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid #1f2536;">
+            <h3 style="font-size: 0.95rem; color: #fff;">فیلترهای پیشرفته</h3>
+            <button onclick="resetFilters()" style="font-size: 0.72rem; color: #ef4444; cursor: pointer;">حذف فیلترها</button>
+          </div>
+
+          <!-- Sort -->
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #d1d5db; margin-bottom: 0.5rem;">مرتب‌سازی:</label>
+            <select id="sort-select" onchange="applyFilters()" style="width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #2b3248; background: #161925; color: #fff; font-size: 0.78rem; outline: none;">
+              <option value="featured">برگزیده پاپیون</option>
+              <option value="price-asc">ارزان‌ترین دکانت</option>
+              <option value="price-desc">گران‌ترین دکانت</option>
+              <option value="rating">بالاترین امتیاز رضایت</option>
+            </select>
+          </div>
+
+          <!-- Gender Filter -->
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #d1d5db; margin-bottom: 0.5rem;">دسته‌بندی جنسیتی:</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
+              <button class="filter-btn active" id="f-gender-all" onclick="setFilter('gender', 'all')">همه</button>
+              <button class="filter-btn" id="f-gender-men" onclick="setFilter('gender', 'men')">مردانه</button>
+              <button class="filter-btn" id="f-gender-unisex" onclick="setFilter('gender', 'unisex')">یونیسکس</button>
+              <button class="filter-btn" id="f-gender-women" onclick="setFilter('gender', 'women')">زنانه</button>
+            </div>
+          </div>
+
+          <!-- Nature Filter (طبع عطر) -->
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #d1d5db; margin-bottom: 0.5rem;">طبع عطر:</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
+              <button class="filter-btn active" id="f-nature-all" onclick="setFilter('nature', 'all')">همه طبع‌ها</button>
+              <button class="filter-btn" id="f-nature-warm" onclick="setFilter('nature', 'warm')">گرم</button>
+              <button class="filter-btn" id="f-nature-cool" onclick="setFilter('nature', 'cool')">خنک</button>
+            </div>
+          </div>
+
+          <!-- Brands Filter -->
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #d1d5db; margin-bottom: 0.5rem;">برند سازنده:</label>
+            <select id="brand-select" onchange="applyFilters()" style="width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #2b3248; background: #161925; color: #fff; font-size: 0.78rem; outline: none;">
+              <option value="all">تمامی برندها</option>
+              <option value="کرید">کرید (Creed)</option>
+              <option value="تام فورد">تام فورد (Tom Ford)</option>
+              <option value="زرجف">زرجف (Xerjoff)</option>
+              <option value="پارفومز د مارلی">مارلی (Parfums de Marly)</option>
+              <option value="بای کیلیان">کیلیان (Kilian)</option>
+              <option value="دیور">دیور (Dior)</option>
+              <option value="میسون فرانسیس کورکجان">کورکجان (MFK)</option>
+              <option value="ناسوماتو">ناسوماتو (Nasomatto)</option>
+            </select>
+          </div>
+
+          <!-- Notes Filter -->
+          <div>
+            <label style="display: block; font-size: 0.75rem; font-weight: 700; color: #d1d5db; margin-bottom: 0.5rem;">نت‌های محبوب بویایی:</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="notes-chips">
+              <span class="note-chip" onclick="filterByNote('آناناس')">آناناس</span>
+              <span class="note-chip" onclick="filterByNote('وانیل')">وانیل</span>
+              <span class="note-chip" onclick="filterByNote('زعفران')">زعفران</span>
+              <span class="note-chip" onclick="filterByNote('تنباکو')">تنباکو</span>
+              <span class="note-chip" onclick="filterByNote('عود')">عود</span>
+              <span class="note-chip" onclick="filterByNote('دارچین')">دارچین</span>
+              <span class="note-chip" onclick="filterByNote('اسطوخودوس')">اسطوخودوس</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Catalog Product Grid -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; background: #12141c; padding: 0.85rem 1.25rem; border-radius: 12px; border: 1px solid #202636;">
+            <div style="font-size: 0.82rem; color: #9ca3af;">
+              نمایش <strong id="catalog-count" style="color: #f3e5ab; font-family: monospace;">۰</strong> عطر منطبق
+            </div>
+            <div id="active-note-badge" style="display: none; font-size: 0.72rem; background: rgba(212,175,55,0.2); color: #d4af37; padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(212,175,55,0.4);">
+              <span>فیلتر نت: </span><span id="active-note-name"></span>
+              <span onclick="filterByNote(null)" style="cursor: pointer; margin-right: 4px;">&times;</span>
+            </div>
+          </div>
+
+          <div class="products-grid" id="catalog-grid">
+            <!-- Populated via Javascript -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.72rem; color: #6b7280; gap: 1rem;">
+        <div>تمامی حقوق این وب‌سایت متعلق به بوتیک تخصصی عطر پاپیون (Papion) می‌باشد. ۱۴۰۳ ©</div>
+        <div><a href="./index.html" style="color: #d4af37;">بازگشت به صفحه اصلی</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared Modals (Cart, Product, Search, Quiz) -->
+  <div class="cart-drawer-overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span>🛍️</span>
+        <h3 style="font-size: 1rem; color: #fff;">سبد خرید شما</h3>
+      </div>
+      <button onclick="closeCart()" style="font-size: 1.3rem; color: #9ca3af; cursor: pointer;">&times;</button>
+    </div>
+    <div style="padding: 1rem 1.25rem 0 1.25rem;">
+      <div class="free-shipping-box">
+        <div id="free-shipping-text">تنها ۲,۰۰۰,۰۰۰ تومان تا ارسال رایگان</div>
+        <div class="progress-track">
+          <div class="progress-fill" id="free-shipping-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-body" id="cart-items-container"></div>
+    <div class="cart-footer">
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+        <input type="text" id="coupon-input" placeholder="کد تخفیف (مثال: PAPION10)" style="flex: 1; padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid #283044; background: #0c0d10; color: #fff; font-size: 0.75rem; outline: none;">
+        <button onclick="applyCoupon()" style="padding: 0.5rem 0.9rem; border-radius: 8px; background: #1c2232; color: #d4af37; border: 1px solid #2f3850; font-size: 0.75rem; font-weight: 700; cursor: pointer;">اعمال</button>
+      </div>
+      <div style="font-size: 0.78rem; space-y: 0.4rem; color: #9ca3af; margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span>جمع اقلام:</span>
+          <span id="cart-subtotal" style="color: #fff; font-family: monospace;">۰ تومان</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: #10b981;">
+          <span>تخفیف ویژه:</span>
+          <span id="cart-discount" style="font-family: monospace;">۰ تومان</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+          <span>هزینه ارسال:</span>
+          <span id="cart-shipping" style="color: #fff; font-family: monospace;">۰ تومان</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding-top: 0.6rem; border-top: 1px solid #222838; font-size: 0.95rem; font-weight: 700; color: #fff;">
+          <span>مبلغ قابل پرداخت:</span>
+          <span id="cart-total" style="color: #f3e5ab; font-family: monospace;">۰ تومان</span>
+        </div>
+      </div>
+      <button onclick="handleCheckout()" style="width: 100%; padding: 0.85rem; border-radius: 12px; background: linear-gradient(90deg, #d4af37, #b58e37); color: #000; font-weight: 700; font-size: 0.88rem; cursor: pointer;">
+        ثبت و نهایی‌سازی سفارش
+      </button>
+    </div>
+  </aside>
+
+  <!-- Product Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content">
+      <button class="btn-close-modal" onclick="closeProductModal()">&times;</button>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div style="background: #0c0d10; padding: 1.5rem; display: flex; align-items: center; justify-content: center;">
+          <img id="modal-img" src="" alt="" style="width: 100%; max-width: 320px; aspect-ratio: 1/1; object-fit: cover; border-radius: 16px; border: 1px solid #242a3c;">
+        </div>
+        <div style="padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; max-height: 80vh; overflow-y: auto;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+              <span id="modal-brand" style="color: #d4af37; font-size: 0.78rem; font-weight: 700;"></span>
+              <span id="modal-concentration" style="font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; background: #1f2536; color: #9ca3af;"></span>
+            </div>
+            <h3 id="modal-title-fa" style="font-size: 1.4rem; color: #fff; margin-bottom: 0.2rem;"></h3>
+            <div id="modal-title-en" style="font-size: 0.78rem; color: #6b7280; font-family: monospace; margin-bottom: 1rem;"></div>
+            <p id="modal-desc" style="font-size: 0.78rem; color: #9ca3af; line-height: 1.7; margin-bottom: 1.2rem;"></p>
+            <div style="background: #0f1118; border: 1px solid #1f2434; border-radius: 12px; padding: 0.85rem; margin-bottom: 1.2rem; font-size: 0.72rem;">
+              <div style="margin-bottom: 0.3rem;"><span style="color: #d4af37; font-weight: 700;">نت آغازین: </span><span id="modal-top-notes" style="color: #d1d5db;"></span></div>
+              <div style="margin-bottom: 0.3rem;"><span style="color: #d4af37; font-weight: 700;">نت میانی: </span><span id="modal-heart-notes" style="color: #d1d5db;"></span></div>
+              <div><span style="color: #d4af37; font-weight: 700;">نت پایه: </span><span id="modal-base-notes" style="color: #d1d5db;"></span></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1.2rem; font-size: 0.72rem;">
+              <div style="background: #141724; padding: 0.6rem; border-radius: 8px; border: 1px solid #23293c;">
+                <div style="color: #9ca3af;">ماندگاری:</div>
+                <div id="modal-longevity" style="color: #f3e5ab; font-weight: 700; margin-top: 2px;"></div>
+              </div>
+              <div style="background: #141724; padding: 0.6rem; border-radius: 8px; border: 1px solid #23293c;">
+                <div style="color: #9ca3af;">پخش بو:</div>
+                <div id="modal-sillage" style="color: #f3e5ab; font-weight: 700; margin-top: 2px;"></div>
+              </div>
+            </div>
+            <div style="margin-bottom: 1.2rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">حجم مورد نظر را انتخاب فرمایید:</div>
+              <div id="modal-volume-options" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;"></div>
+            </div>
+          </div>
+          <div style="padding-top: 1rem; border-top: 1px solid #222838; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <div style="font-size: 0.68rem; color: #9ca3af;">قیمت انتخابی:</div>
+              <div id="modal-final-price" style="font-size: 1.15rem; font-weight: 800; color: #f3e5ab; font-family: monospace;"></div>
+            </div>
+            <button onclick="addModalItemToCart()" class="btn-primary" style="padding: 0.75rem 1.4rem;">
+              <span>افزودن به سبد</span>
+              <span>🛍️</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content" style="max-width: 600px; padding: 1.5rem;">
+      <button class="btn-close-modal" onclick="closeSearchModal()">&times;</button>
+      <div style="margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 0.5rem;">جستجوی هوشمند در بوتیک پاپیون</h3>
+        <input type="text" id="search-input" oninput="handleSearchInput(event)" placeholder="نام عطر، برند یا نت..." style="width: 100%; padding: 0.8rem 1rem; border-radius: 12px; border: 1px solid #2d354b; background: #0c0d10; color: #fff; font-size: 0.85rem; outline: none;">
+      </div>
+      <div id="search-results" style="max-height: 50vh; overflow-y: auto;"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Modal -->
+  <div class="modal-overlay" id="quiz-modal">
+    <div class="modal-content" style="max-width: 620px; padding: 2rem;">
+      <button class="btn-close-modal" onclick="closeQuizModal()">&times;</button>
+      <div style="text-align: right;" id="quiz-content"></div>
+    </div>
+  </div>
+
+  <!-- Additional CSS for Catalog Sidebar -->
+  <style>
+    .filter-btn {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #262c3e;
+      background: #161925;
+      color: #9ca3af;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover {
+      border-color: #d4af37;
+      color: #fff;
+    }
+    .filter-btn.active {
+      background: #d4af37;
+      color: #0c0d10;
+      font-weight: 700;
+      border-color: #d4af37;
+    }
+    .note-chip {
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #171b28;
+      border: 1px solid #262c3e;
+      color: #d1d5db;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .note-chip:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+  </style>
+
+  <script src="./assets/main.js"></script>
+  <script>
+    // Filter State
+    let currentFilters = {
+      gender: 'all',
+      nature: 'all',
+      brand: 'all',
+      note: null,
+      sort: 'featured'
+    };
+
+    function setFilter(type, value) {
+      currentFilters[type] = value;
+      // Update UI buttons
+      document.querySelectorAll(`[id^="f-${type}-"]`).forEach(b => b.classList.remove('active'));
+      const targetBtn = document.getElementById(`f-${type}-${value}`);
+      if (targetBtn) targetBtn.classList.add('active');
+      applyFilters();
+    }
+
+    function filterByNote(noteName) {
+      currentFilters.note = noteName;
+      const badge = document.getElementById('active-note-badge');
+      const nameEl = document.getElementById('active-note-name');
+      if (badge && nameEl) {
+        if (noteName) {
+          badge.style.display = 'inline-flex';
+          nameEl.textContent = noteName;
+        } else {
+          badge.style.display = 'none';
+        }
+      }
+      applyFilters();
+    }
+
+    function resetFilters() {
+      currentFilters = {
+        gender: 'all',
+        nature: 'all',
+        brand: 'all',
+        note: null,
+        sort: 'featured'
+      };
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      const gAll = document.getElementById('f-gender-all');
+      const nAll = document.getElementById('f-nature-all');
+      if (gAll) gAll.classList.add('active');
+      if (nAll) nAll.classList.add('active');
+      const bSel = document.getElementById('brand-select');
+      const sSel = document.getElementById('sort-select');
+      if (bSel) bSel.value = 'all';
+      if (sSel) sSel.value = 'featured';
+      filterByNote(null);
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const bSel = document.getElementById('brand-select');
+      const sSel = document.getElementById('sort-select');
+      if (bSel) currentFilters.brand = bSel.value;
+      if (sSel) currentFilters.sort = sSel.value;
+
+      const filtered = PERFUMES_DATA.filter(p => {
+        if (currentFilters.gender !== 'all') {
+          if (currentFilters.gender === 'men' && p.gender !== 'men' && p.gender !== 'unisex') return false;
+          if (currentFilters.gender === 'women' && p.gender !== 'women' && p.gender !== 'unisex') return false;
+          if (currentFilters.gender === 'unisex' && p.gender !== 'unisex') return false;
+        }
+        if (currentFilters.nature !== 'all' && p.nature !== currentFilters.nature) return false;
+        if (currentFilters.brand !== 'all' && p.brand !== currentFilters.brand) return false;
+        if (currentFilters.note) {
+          const has = [...p.topNotes, ...p.heartNotes, ...p.baseNotes].some(n => n.includes(currentFilters.note));
+          if (!has) return false;
+        }
+        return true;
+      }).sort((a, b) => {
+        if (currentFilters.sort === 'price-asc') return a.volumeOptions[0].price - b.volumeOptions[0].price;
+        if (currentFilters.sort === 'price-desc') return b.volumeOptions[0].price - a.volumeOptions[0].price;
+        if (currentFilters.sort === 'rating') return b.rating - a.rating;
+        return 0;
+      });
+
+      renderCatalog(filtered);
+    }
+
+    function renderCatalog(items) {
+      const container = document.getElementById('catalog-grid');
+      const countEl = document.getElementById('catalog-count');
+      if (countEl) countEl.textContent = toPersianDigits(items.length);
+      if (!container) return;
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 4rem; background: #12141c; border-radius: 18px; border: 1px solid #202636;">
+            <p style="color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem;">عطری با فیلترهای انتخابی یافت نشد.</p>
+            <p style="color: #9ca3af; font-size: 0.8rem; margin-bottom: 1.5rem;">می‌توانید فیلترها را حذف کنید تا تمام عطرها نمایش داده شوند.</p>
+            <button onclick="resetFilters()" class="btn-primary" style="padding: 0.6rem 1.2rem;">بازنشانی فیلترها</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = items.map(p => `
+        <div class="product-card">
+          <div class="product-img-box" onclick="openProductModal('${p.id}')">
+            <div class="card-top-badges">
+              <span class="badge-tag">دکانت ۲ تا ۱۰ میل</span>
+              <button class="btn-wishlist ${wishlist.includes(p.id) ? 'active' : ''}" data-id="${p.id}" onclick="event.stopPropagation(); toggleWishlist('${p.id}')">
+                ♥
+              </button>
+            </div>
+            <img src="${p.image}" alt="${p.nameFa}" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <div class="product-meta-row">
+                <span class="product-brand">${p.brand}</span>
+                <span>★ ${p.rating}</span>
+              </div>
+              <h3 class="product-title-fa" onclick="openProductModal('${p.id}')">${p.nameFa}</h3>
+              <div class="product-title-en">${p.nameEn}</div>
+              <div class="product-notes-preview">نت‌ها: ${p.topNotes[0]}، ${p.heartNotes[0]}، ${p.baseNotes[0]}</div>
+            </div>
+            <div class="product-price-row">
+              <div>
+                <div class="price-label">شروع دکانت از</div>
+                <div class="price-value">${formatPrice(p.volumeOptions[0].price)}</div>
+              </div>
+              <button class="btn-select-volume" onclick="openProductModal('${p.id}')">
+                تست دکانت
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Read URL params (e.g. ?gender=men)
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const g = params.get('gender');
+      if (g) {
+        setFilter('gender', g);
+      } else {
+        applyFilters();
+      }
+    });
+  </script>
+</body>
+</html>
